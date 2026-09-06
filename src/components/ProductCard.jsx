@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 function formatPrice(value) {
-  return `₹${value.toLocaleString("en-IN")}`;
+  return "\u20B9" + value.toLocaleString("en-IN");
 }
 
 function ProductCard({ product }) {
@@ -23,7 +23,6 @@ function ProductCard({ product }) {
 
       <div className="product-card-info">
         <span className="product-brand">{product.brand}</span>
-
         <h3>{product.name}</h3>
 
         <div className="price-row">
@@ -32,8 +31,7 @@ function ProductCard({ product }) {
         </div>
 
         <p className="emi-start">
-          EMI from{" "}
-          <strong>{formatPrice(lowestEmi.monthlyAmount)}/mo</strong>
+          EMI from <strong>{formatPrice(lowestEmi.monthlyAmount)}/mo</strong>
         </p>
 
         <div className="product-card-action">

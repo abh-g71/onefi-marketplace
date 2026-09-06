@@ -489,4 +489,306 @@ button {
   margin: 0;
   color: #7d7782;
   font-size: 13px;
+}.product-detail-card {
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid #e7e3ea;
+  border-radius: 20px;
+  background: white;
+}
+
+.product-detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  padding: 24px;
+  background: #faf9fb;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-detail-info {
+  padding: 20px;
+}
+
+.product-detail-info h2 {
+  margin: 6px 0 12px;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+}
+
+.detail-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.detail-price-row strong {
+  font-size: 21px;
+}
+
+.detail-price-row span {
+  color: #99949e;
+  font-size: 13px;
+  text-decoration: line-through;
+}
+
+.detail-savings {
+  margin: 6px 0 14px;
+  color: #23844b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cashback-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 9px;
+  background: #f1ebff;
+  color: #6c36d9;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.detail-section {
+  margin-top: 24px;
+}
+
+.detail-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.detail-section-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+
+.detail-section-heading > span {
+  color: #7540e8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.detail-section-heading p {
+  margin: 4px 0 0;
+  color: #88838d;
+  font-size: 12px;
+}
+
+.variant-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.variant-option {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid #ddd8e2;
+  border-radius: 12px;
+  background: white;
+  color: #302a35;
+  font-size: 13px;
+}
+
+.variant-option.selected {
+  border-color: #7540e8;
+  background: #f5f0ff;
+  color: #6330cf;
+  font-weight: 700;
+}
+
+.variant-dot {
+  width: 13px;
+  height: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+
+.variant-check {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.details-list {
+  overflow: hidden;
+  border: 1px solid #e7e3ea;
+  border-radius: 15px;
+  background: white;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0edf2;
+  color: #403a45;
+  font-size: 13px;
+}
+
+.detail-item:last-child {
+  border-bottom: 0;
+}
+
+.detail-item svg {
+  flex-shrink: 0;
+  color: #7540e8;
+}
+
+.emi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.emi-plan-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70px;
+  padding: 13px 14px;
+  border: 1px solid #e2dde7;
+  border-radius: 15px;
+  background: white;
+  color: #302a35;
+  text-align: left;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.emi-plan-card:hover {
+  border-color: #b9a1ed;
+}
+
+.emi-plan-card.selected {
+  border: 2px solid #7540e8;
+  background: #f7f2ff;
+}
+
+.emi-plan-main {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.emi-radio {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 2px solid #b9b2bf;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.emi-plan-card.selected .emi-radio {
+  border-color: #7540e8;
+}
+
+.emi-radio span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #7540e8;
+}
+
+.emi-plan-main strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.emi-plan-main span {
+  display: block;
+  color: #807986;
+  font-size: 11px;
+}
+
+.emi-plan-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.emi-plan-price > strong {
+  font-size: 14px;
+}
+
+.emi-zero {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #23844b;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 22px 0 12px;
+  color: #6e6874;
+  font-size: 11px;
+}
+
+.secure-note svg {
+  color: #23844b;
+}
+
+.proceed-button {
+  width: 100%;
+  min-height: 52px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: #7540e8;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.proceed-button:hover {
+  background: #6632d7;
+}
+
+.proceed-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.product-error {
+  margin-top: 25px;
+}
+
+@media (max-width: 420px) {
+  .product-detail-image {
+    height: 250px;
+  }
+
+  .emi-plan-card {
+    padding: 11px;
+  }
+
+  .emi-plan-price > strong {
+    font-size: 12px;
+  }
 }
