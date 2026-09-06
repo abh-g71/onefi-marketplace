@@ -1,15 +1,20 @@
-import { Search, MapPin, Home, ShoppingBag, User } from "lucide-react";
+import { Search, Home, ShoppingBag, User, Smartphone } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const tabs = ["Top Brands", "Nearby Stores", "1Fi Marketplace"];
 
 function Shop() {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState("Top Brands");
 
   const handleTabClick = (tab) => {
     if (tab === "1Fi Marketplace") {
       navigate("/marketplace");
+      return;
     }
+
+    setActiveTab(tab);
   };
 
   return (
@@ -30,7 +35,10 @@ function Shop() {
 
           <div className="hero-product">
             <div className="product-orb"></div>
-            <div className="hero-phone">📱</div>
+
+            <div className="hero-phone">
+              <Smartphone size={82} strokeWidth={1.4} />
+            </div>
           </div>
         </section>
 
@@ -40,7 +48,7 @@ function Shop() {
               <button
                 key={tab}
                 className={`shop-tab ${
-                  tab === "Top Brands" ? "active" : ""
+                  activeTab === tab ? "active" : ""
                 }`}
                 onClick={() => handleTabClick(tab)}
               >
@@ -51,16 +59,27 @@ function Shop() {
 
           <div className="search-box">
             <Search size={20} />
-            <input placeholder="Search online stores..." />
+
+            <input
+              placeholder={
+                activeTab === "Nearby Stores"
+                  ? "Search nearby stores..."
+                  : "Search online stores..."
+              }
+            />
           </div>
 
           <div className="section-heading">
-            <h2>Top Brands</h2>
+            <h2>{activeTab}</h2>
             <button>View all</button>
           </div>
 
           <div className="empty-shop-card">
-            <p>Explore your favourite brands</p>
+            <p>
+              {activeTab === "Nearby Stores"
+                ? "Nearby stores will appear here"
+                : "Explore your favourite brands"}
+            </p>
           </div>
         </section>
       </main>
